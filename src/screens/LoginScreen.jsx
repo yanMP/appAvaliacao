@@ -43,7 +43,7 @@ export default function LoginScreen({ navigation }) {
       const usuarioRef = await signInWithEmailAndPassword(auth, email, senha);
       console.log(usuarioRef);
       // Redirecionar para a tela principal ou outra tela após login bem-sucedido
-      navigation.navigate("HomeScreen");
+      navigation.navigate("ApiFilmes");
     } catch (error) {
       if (error.code === "auth/user-not-found") {
         setErrorMessage("Usuário não encontrado.");
@@ -106,6 +106,9 @@ export default function LoginScreen({ navigation }) {
         <View style={{ marginBottom: 10 }} /> 
         <Button onPress={() => navigation.navigate("RegisterScreen")}>
           Faça seu cadastro
+        </Button>
+        <Button onPress={() => navigation.navigate("LocationScreen")}>
+          endereço de IP
         </Button>
           </View>
       

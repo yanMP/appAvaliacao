@@ -6,6 +6,9 @@ import LoginScreen from "../screens/LoginScreen";
 import HomeScreen from "../screens/HomeScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import { Provider } from "react-native-paper";
+import ApiFilmes from "../screens/ApiFilmes";
+import LocationScreen from "../screens/LocationScreen";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +37,18 @@ export default function AppNavigator() {
             name="RegisterScreen"
             component={RegisterScreen}
             options={{ title: "cadastro de usuário" }}
+          />
+
+          <Stack.Screen
+            name="ApiFilmes"
+            component={ApiFilmes}
+            options={{ title: "tela de filmes" }}
+          />
+
+<Stack.Screen
+            name="LocationScreen"
+            component={LocationScreen}
+            options={{ title: "IP" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
